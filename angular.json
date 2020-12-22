@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "AngularGuide"
+  "defaultProject": "AngularGuide",
+  "cli": {
+    "analytics": "6da60e97-ac8f-494f-8e9c-bc0cb1f821b6"
+  }
 }
