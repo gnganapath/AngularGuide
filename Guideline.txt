@@ -1,0 +1,11 @@
+Guideline:
+==========
+link: https://material.angular.io/guide/getting-started
+
+steps:
+1.ng add @angular/material
+2.theme - pinkg.gree,
+3.global style appy -yes
+4.animation install - yes
+
+
