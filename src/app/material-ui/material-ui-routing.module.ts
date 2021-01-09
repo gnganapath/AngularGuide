@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { MaterialUiComponent } from './material-ui.component';
 
 const routes: Routes = [
-  { path:'' , component: MaterialUiComponent}
+  { path:'' , component: MaterialUiComponent,
+    
+  }
 ];
 
 @NgModule({
