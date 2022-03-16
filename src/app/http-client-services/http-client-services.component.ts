@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ajax } from 'rxjs/ajax';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-http-client-services',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpClientServicesComponent implements OnInit {
 
-  constructor() { }
+   title = '';
+   data :any;
+   constructor() {
+      //this.data = "";
+      this.title = "Using RxJs with Angular";
+      let a = this.getData();
+   }
+   getData() {
+      const response =  ajax('https://jsonplaceholder.typicode.com/users')
+         .pipe(map(e => e.response));
+        response.subscribe(res => {
+         console.log(res);
+         this.data = res;
+      });
+   }
 
   ngOnInit(): void {
   }
